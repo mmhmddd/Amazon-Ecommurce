@@ -1,0 +1,159 @@
+[
+    {
+      "id": 1,
+      "brand": "Elica",
+      "name": "Elica 60 cm 1200 m3/hr Filterless Autoclean Kitchen Chimney with 15 Years Warranty (WDFL 606 HAC LT...",
+      "image": "../assets/image/image 293.png",
+      "currentPrice": "₹12,990",
+      "discountPercentage": "46% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": 13204,
+        "boughtCount": 300
+      }
+    },
+    {
+      "id": 2,
+      "brand":"Godrej",
+      "name": "Godrej 1.5 Ton 3 Star, 5-In-1 Convertible, Inverter Split AC (5 Years warranty, Copper, I-Sense Technology, 2023...",
+      "image": "../assets/image/image.png",
+      "currentPrice": "₹32,990",
+      "discountPercentage": "30% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": 610,
+        "boughtCount": 100
+      }
+    },
+    {
+      "id": 3,
+      "brand":"LG",
+      "name": "LG 28 L Convection Microwave Oven (MC2846BV, Black, Quartz Heater)",
+      "image": "../assets/image/image (1).png",
+      "currentPrice": "₹13,490",
+      "discountPercentage": "21% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": 922,
+        "boughtCount": 300
+      }
+    },
+    {
+      "id": 4,
+      "brand":"Samsung ",
+      "name": "Samsung 8 kg, 5 star, Eco Bubble Tech, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load...",
+      "image": "../assets/image/image (2).png",
+      "currentPrice": "₹19,990",
+      "discountPercentage": "26% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "24,405",
+        "boughtCount": "1k+"
+      }
+    },
+    {
+      "id": 5,
+      "brand":"Samsung",
+      "name": "Samsung 7 kg, Eco Bubble Techn, Digital Inverter Motor, Soft Closing Door, Fully-Automatic Top Load Washing...",
+      "image": "../assets/image/image (4).png",
+      "currentPrice": "₹17,990",
+      "discountPercentage": "20% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "6,483",
+        "boughtCount": "1k+"
+      }
+    },
+    {
+      "id": 6,
+      "brand":"Samsung",
+      "name": "Samsung 7 kg, 3 star, Fully-Automatic Top Load Washing Machine (WA70A4002GS/TL, Imperial Silver)",
+      "image": "../assets/image/image (5).png",
+      "currentPrice": "₹16,590",
+      "discountPercentage": "21% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "5,123",
+        "boughtCount": "1k+"
+      }
+    }
+    , {
+      "id": 7,
+      "brand":"LG",
+      "name": "LG 6.5 Kg 5 Star Inverter Turbodrum Fully Automatic Top Loading Washing Machine (T65SKSF4Z, 3 Smart Motion...",
+      "image": "../assets/image/image (6).png",
+      "currentPrice": "₹62,490",
+      "discountPercentage": "34% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "19,922",
+        "boughtCount": "900+"
+      }
+    }
+    , {
+      "id": 8,
+      "brand":"Godrej",
+      "name": "Godrej 6.5 Kg 5 Star I-Wash Technology for Automatic One Touch Wash Fully-Automatic Top Load Washing Machine...",
+      "image": "../assets/image/image (7).png",
+      "currentPrice": "₹12,990",
+      "discountPercentage": "27% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "1,440",
+        "boughtCount": "800+"
+      }
+    },
+    {
+      "id": 9,
+      "brand":"Panasonic",
+      "name": "Panasonic 20 L Solo Microwave Oven (NN-SM25JBFDG,Black)",
+      "image": "../assets/image/image (8).png",
+      "currentPrice": "₹13,204",
+      "discountPercentage": "46% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "13,204",
+        "boughtCount": "300+"
+      }
+    },
+    {
+      "id": 10,
+      "brand":"Samsung",
+      "name": "Samsung 183 L, 4 Star, Digital Inverter, Direct-Cool Single Door Refrigerator (RR20C1824CR/HL, Red,",
+      "image": "../assets/image/image (9).png",
+      "currentPrice": "₹32,990",
+      "discountPercentage": "30% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "610",
+        "boughtCount": "100+"
+      }
+    },
+    {
+      "id": 11,
+      "brand":"LG",
+      "name": "LG 7 Kg, 5 Star, Direct Drive Technology, Steam Wash, 6 Motion DD, Smart Diagnosis, Fully-Automatic Front Load",
+      "image": "../assets/image/image (10).png",
+      "currentPrice": "₹13,490",
+      "discountPercentage": "21% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "922",
+        "boughtCount": "600+"
+      }
+    },
+    {
+      "id": 12,
+      "brand":"Whirlpool ",
+      "name": "Whirlpool 184 L 2 Star Direct-Cool Single Door Refrigerator (205 WDE CLS 2S SAPPHIRE BLUE-Z, Blue,2023 Model)",
+      "image": "../assets/image/image (11).png",
+      "currentPrice": "₹19,990",
+      "discountPercentage": "26% off",
+      "rating": {
+        "stars": "★★★★☆",
+        "count": "25,405",
+        "boughtCount": "1k+"
+      }
+    }
+  ]
+  

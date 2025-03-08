@@ -1,1 +1,124 @@
-<p>products works!</p>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="filters-container">
+                    <!-- Delivery Day Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">Delivery Day</h3>
+                        <div class="filter-option">
+                            <input type="radio" id="delivery-day" name="deliveryDay" value="24h">
+                            <label for="delivery-day">Get it in 7 Days</label>
+                        </div>
+                    </div>
+        
+                    <!-- Customer Reviews Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">Customer Reviews</h3>
+                        <div class="filter-option ratings">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">& up</span>
+                        </div>
+                    </div>
+        
+                    <!-- Brand Filter -->
+                    <div class="filter-option">
+                        <input type="radio" id="all-brand" name="brand" value="all" (change)="onBrandChange('all')" [checked]="selectedBrand === 'all'">
+                        <label for="all-brand">ALL</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-samsung" name="brand" value="Samsung" (change)="onBrandChange('Samsung')" [checked]="selectedBrand === 'Samsung'">
+                        <label for="brand-samsung">Samsung</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-lg" name="brand" value="LG" (change)="onBrandChange('LG')" [checked]="selectedBrand === 'LG'">
+                        <label for="brand-lg">LG</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-haier" name="brand" value="Haier" (change)="onBrandChange('Haier')" [checked]="selectedBrand === 'Haier'">
+                        <label for="brand-haier">Haier</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-godrej" name="brand" value="Godrej" (change)="onBrandChange('Godrej')" [checked]="selectedBrand === 'Godrej'">
+                        <label for="brand-godrej">Godrej</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-ifb" name="brand" value="IFB" (change)="onBrandChange('IFB')" [checked]="selectedBrand === 'IFB'">
+                        <label for="brand-ifb">IFB</label>
+                      </div>
+                      
+                      <div class="filter-option">
+                        <input type="radio" id="brand-panasonic" name="brand" value="Panasonic" (change)="onBrandChange('Panasonic')" [checked]="selectedBrand === 'Panasonic'">
+                        <label for="brand-panasonic">Panasonic</label>
+                      </div>
+                      
+                    <!-- Price Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-title">Price</h3>
+                        <div class="filter-option">
+                            <input type="radio" id="price-all" name="priceRange" value="all" checked checked (change)="onPriceChange('all')">
+                            <label for="price-all">All</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-under-10000" name="priceRange" value="under10000" (change)="onPriceChange('under10000')">
+                            <label for="price-under-10000">₹5900 to ₹10,000</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-10000-20000" name="priceRange" value="10000to20000" (change)="onPriceChange('10000to20000')">
+                            <label for="price-10000-20000">₹10,000 to ₹20,000</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-20000-30000" name="priceRange" value="20000to30000" (change)="onPriceChange('20000to30000')">
+                            <label for="price-20000-30000">₹20,000 to ₹30,000</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="radio" id="price-over-30000" name="priceRange" value="over30000" (change)="onPriceChange('over30000')">
+                            <label for="price-over-30000">₹30,000 to ₹45,000</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-10">
+                <div class=" row product-card-contain">
+                    <div class="product-card" *ngFor="let product of filteredProducts">
+                        <div class="product-image">
+                          <img [src]="product.image" [alt]="product.name">
+                        </div>
+                        <div class="product-details">
+                          <h3 class="product-name">{{ product.name }}</h3>
+                          <div class="product-rating">
+                            <span class="stars">{{ product.rating.stars}}</span>
+                            <span class="rating-count">{{ product.rating.count }}</span>
+                            <div class="bought-count">{{ product.rating.boughtCount }} bought in past month</div>
+                          </div>
+                          <div class="product-price">
+                            <span class="current-price">{{ product.currentPrice }}</span>
+                            <span class="discount-percentage">{{ product.discountPercentage }}</span>
+                            <div class="emi-info">
+                                <span>Save extra with No Cost EMI</span>
+                            </div>
+                        </div>
+
+                        <div class="delivery-info">
+                            <span class="free-delivery">FREE delivery by Sat, 14 Sept</span>
+                            <span class="delivery-time">7:00 am - 9:00 pm</span>
+                        </div>
+                          <button class="add-to-cart-btn">Add to cart</button>
+
+                        </div>
+                      </div>
+                      
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    
