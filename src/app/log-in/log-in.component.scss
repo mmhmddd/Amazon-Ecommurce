@@ -1,0 +1,223 @@
+$text-primary: #000000;
+$text-secondary: #717171;
+$baby-blue: #2A8FD7;
+$golden-color: #FFD814;
+$font: 'IBM Plex Sans Condensed', sans-serif;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: $font;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #f7f7f7;
+    @include center();
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo-container {
+    @include center();
+    margin: 25px 0;
+
+}
+
+.container-signIN{
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    .signIN-title{
+        font-weight: 600;
+        font-size: 24px;
+        color: $text-primary;
+        margin-bottom: 15px;
+    }
+    label {
+        font-weight: 600;
+        font-size: 14px;
+        color: $text-primary;
+        display: block;
+        margin: 10px 0 5px;
+    }
+    
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        &:hover{
+            border: 2px solid #ccc;
+
+        }
+    }
+    .Continue-btn{
+        margin: 15px 0;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: $golden-color;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+    
+        &:hover {
+            background-color: darken($golden-color, 10%);
+        }
+    }
+    .by-continuing{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 124%;
+        color: $text-primary;
+        a{
+            font-family: 'Inika';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 124%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            color: $baby-blue;
+            margin: 0 3px;
+            &:hover{
+                color: darken($color: $baby-blue, $amount: 20%);
+            }
+        }
+    }
+    .need-help {
+        margin: 10px 0;
+        color: $baby-blue;
+        position: relative; // Add this to allow ::after positioning
+    
+        &:hover {
+            color: darken($baby-blue, 20%);
+        }
+    
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #D9D9D9;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+        }
+    }
+    h3{
+        margin: 30px 0 5px 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: $text-primary;
+    }
+    p a{
+        font-family: Inika;
+        font-weight: 300;
+        font-size: 16px;
+       color: $baby-blue;
+       text-decoration: none;
+       &:hover {
+        color: darken($baby-blue, 20%);
+    }
+
+    }
+}
+
+.create-nwe-acc{
+    background-color: #FFFFFF;
+    width: 490px;
+    padding: 30px;
+    margin: auto;
+
+   
+    p{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+
+
+        &::before,
+        &::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 10px; 
+            width: 50%;
+        }
+    }
+    button {
+        width: 100%;
+        height: 37px;
+        border-radius: 10px;
+        border: 0.5px solid #000000;
+        padding: 7px 11px;
+        margin: auto;
+        background-color: #FFFFFF;
+        transition: background-color 0.3s ease-in, border-color 0.3s ease-in; // Fix transition
+    
+        &:hover {
+            background-color: darken($golden-color, 10%);
+            border-color: transparent; // Prevent layout shifts instead of `border: none;`
+        }
+    }
+   
+    
+}
+
+.footer{
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+        background: linear-gradient(to right, transparent, #D9D9D9, #000, #aaa, transparent);
+    }
+    .links-container{
+        @include center();
+        flex-direction: row;
+        span {
+            margin: 10px 18px;
+        }
+        span a{
+            color: $baby-blue;
+            &:hover{
+                color: darken($baby-blue, 10%);
+
+            }
+        }
+
+    }
+    p{
+        @include center();
+        font-family: IBM Plex Sans Condensed;
+        font-weight: 300;
+        font-size: 19.56px;
+        line-height: 124%;
+        counter-reset: $text-primary;
+    }
+}

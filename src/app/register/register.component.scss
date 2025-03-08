@@ -1,0 +1,157 @@
+$text-primary: #000000;
+$text-secondary: #717171;
+$baby-blue: #2A8FD7;
+$golden-color: #FFD814;
+$font: 'IBM Plex Sans Condensed', sans-serif;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: $font;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #f7f7f7;
+    @include center();
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo-container {
+    @include center();
+    margin: 25px 0;
+}
+
+.container-register {
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    
+    .register-title {
+        font-weight: 600;
+        font-size: 24px;
+        color: $text-primary;
+        margin-bottom: 15px;
+    }
+    
+    label {
+        font-weight: 600;
+        font-size: 14px;
+        color: $text-primary;
+        display: block;
+        margin: 10px 0 5px;
+    }
+    
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        &:hover{
+            border: 2px solid #ccc;
+
+        }
+    }
+    
+    .verify-btn {
+        margin: 15px 0;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        background-color: $golden-color;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+    
+        &:hover {
+            background-color: darken($golden-color, 10%);
+        }
+    
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #D9D9D9;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+        }
+    }
+    
+    
+    .Buying-work {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 15px;
+        color: $text-primary;
+        line-height: 100%;
+    }
+    
+    .create_business_acc  {
+        text-decoration: none;
+        font-size: 19px;
+        line-height: 124%;
+        p{
+            color: $baby-blue;
+            &:hover{
+                color: darken($color: $baby-blue, $amount: 20%);
+            }
+        }
+       
+    
+    }
+    
+    .already-have {
+        font-size: 14px;
+        margin-top: 15px;
+        font-weight: 400;
+        color: $text-primary;
+       
+    }
+    .sign_in {
+        color: $baby-blue;
+        text-decoration: none;
+        margin-left: 3px;
+        &:hover{
+            color: darken($color: $baby-blue, $amount: 20%);
+        }
+    
+    }
+
+   
+    
+    p {
+        font-weight: 400;
+        font-size: 12px;
+        color: $text-primary;
+        margin-top: 10px;
+    }
+    .last-span a {
+        color: $baby-blue ;
+        font-size: 14px;
+        margin-right: 4px;
+        &:hover{
+            color: darken($color: $baby-blue, $amount: 20%);
+        }
+    }
+
+}

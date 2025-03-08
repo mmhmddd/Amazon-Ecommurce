@@ -1,0 +1,26 @@
+<div class="logo-container">
+    <img src="../../assets/image/Group 1.png" alt="">
+</div>
+
+<div class="container-signIN">
+    <p class="signIN-title">Sign in</p>
+    <label for="phone">Mobile phone number</label>
+    <input type="text" [(ngModel)]="phone" id="phone">
+    <button class="Continue-btn" (click)="login()">Continue</button>
+    <p class="by-continuing">By continuing, you agree to Amazon’s <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></p>
+</div>
+
+<div class="create-nwe-acc">
+    <p>New to Amazon?</p>
+    <button class="create-btn" (click)="goToRegister()">Create your Amazon account</button>
+</div>
+
+
+<div class="footer">
+    <div class="links-container">
+        <span><a href="">Conditions of Use</a></span>
+        <span><a href="">Privacy Notice</a></span>
+        <span><a href="">Help</a></span>
+    </div>
+    <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+</div>

@@ -1,0 +1,20 @@
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<div class="logo-container">
+    <img src="../../assets/image/Group 1.png" alt="">
+</div>
+
+<div class="container-register">
+    <p class="register-title">Create Account</p>
+    <label for="name">Your name</label>
+    <input type="text" [(ngModel)]="name" id="name">
+    <label for="phone">Mobile number</label>
+    <input type="text" [(ngModel)]="phone" id="phone">
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="password" id="password">
+    <button class="verify-btn" (click)="register()">Verify mobile number</button>
+
+    <span class="already-have">Already have an account?</span> 
+    <span class="sign_in"><a href="#" (click)="goToLogin()">Sign in</a></span>
+</div>
