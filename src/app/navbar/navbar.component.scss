@@ -1,0 +1,84 @@
+.nav1 {
+  background-color: rgba(19, 25, 33, 1);;
+  color: white;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.nav2 {
+  background-color:rgba(35, 47, 62, 1);
+}
+
+.color {
+  color:rgba(192, 204, 204, 1);
+}
+
+@mixin nav-item-styles {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.1s;
+  &:hover {
+    border: 1px solid white;
+  }
+}
+
+.nav1 li {
+  @include nav-item-styles;
+}
+
+.nav2 li {
+  @include nav-item-styles;
+  padding: 2px 8px;
+}
+
+.form-select {
+  border: 0;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgb(255, 187, 0);
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+form {
+  button:focus {
+    box-shadow: 0 0 0 0.15rem rgb(255, 187, 0);
+  }
+}
+
+.counter{
+ color: #f08804;
+ font-size: large;
+}
+@media (min-width: 992px) {
+ .counter {
+  left: 45%;
+  top: 20%;
+ }
+}
+@media (min-width: 1220px) {
+ .counter {
+  left: 40%;
+  top: 20%;
+ }
+}
+@media (min-width: 1280px) {
+ .counter {
+  left: 35%;
+  top: 20%;
+ }
+}
+@media (min-width: 1330px) {
+ .counter{
+  left: 35%;
+  top: 20%;
+ }
+}
+

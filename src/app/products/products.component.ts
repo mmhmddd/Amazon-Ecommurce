@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,7 @@ export class ProductsComponent implements OnInit {
   selectedPrice: string = 'all';
   selectedDelivery: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private _CartService:CartService) {}
 
   ngOnInit() {
     this.http.get<any[]>('assets/data.json').subscribe(data => {
@@ -63,5 +64,8 @@ export class ProductsComponent implements OnInit {
   onDeliveryChange(value: string) {
     this.selectedDelivery = value;
     this.filterProducts();
+  }
+  addToCart(productId: number): void {
+    this._CartService.addToCart(productId);
   }
 }

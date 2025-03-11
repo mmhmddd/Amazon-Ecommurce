@@ -11,6 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { SingleProductsComponent } from './single-products/single-products.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     ProductsComponent,
-    SingleProductsComponent
+    SingleProductsComponent,
+    CartComponent,
+    MainLayoutComponent,
+    AuthLayoutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
