@@ -1,1 +1,194 @@
-<p>navbar works!</p>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark px-3 nav1">
+    <a class="navbar-brand fw-bold text-warning" href="#">
+      <img src="assets/image/Amazon.png" alt="Amazon-logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link text-light d-flex"
+            href="#"
+          >
+            <div class="align-self-end">
+              <img src="assets/image/location.png" alt="location-icon" class="me-1" />
+            </div>
+            <span class="d-flex flex-column">
+              <small class="color">Delivering to Surat 394210</small>
+              Update location
+            </span>
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex w-50 p-2">
+        <select class="form-select rounded-end-0 w-25 bg-secondary-subtle text-muted">
+          <option selected>All</option>
+          <option>Electronics</option>
+        </select>
+        <input
+          class="form-control rounded-0 p-2"
+          type="search"
+          placeholder="Search Amazon.in"
+        />
+        <button class="btn btn-warning rounded-start-0" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown d-flex align-items-center">
+          <img
+            src="assets/image/India.png"
+            alt="India-flag"
+            class="ms-2"
+            width="20"
+          />
+          <a
+            class="nav-link dropdown-toggle text-light"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            EN
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">عربي</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            routerLink="/login"
+            class="nav-link dropdown-toggle text-light"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            Hello, Sign in <br />
+            <small>Account & Lists</small>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Your Account</a></li>
+            <li><a class="dropdown-item" href="#">Orders</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">
+            Returns <br />
+            <small>& Orders</small>
+          </a>
+        </li>
+        <li class="nav-item position-relative flex-nowrap">
+          <a class="nav-link text-light" href="#" routerLink="/cart">
+            <img src="assets/image/cart.png" alt="cart-icon" /> Cart
+            <span class="position-absolute counter translate-middle badge">
+             {{cartCounter}}
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="nav1 collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto d-lg-none">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">
+          Sign in
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#">
+          Home
+        </a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0" routerLink="/product">Electronics</a>
+      </li>
+      <li class="nav-item position-relative">
+        <a class="nav-link text-light" href="#" routerLink="/cart">Cart
+          <span class="position-absolute c translate-middle badge">
+           {{cartCounter}}
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <form class="d-flex w-100 p-2 d-block d-lg-none">
+    <select class="form-select rounded-end-0 w-25 bg-secondary-subtle text-muted">
+      <option selected>All</option>
+      <option>Electronics</option>
+      <option>Fashion</option>
+    </select>
+    <input
+      class="form-control rounded-0 p-2"
+      type="search"
+      placeholder="Search Amazon.in"
+    />
+    <button class="btn btn-warning rounded-start-0" type="submit">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+  <div class="text-light px-3 py-2 nav2 d-none d-lg-block">
+    <ul class="nav d-flex flex-wrap overflow-auto">
+      <li class="nav-item m-0">
+        <a routerLink="/home" href="#" class="nav-link text-light p-0"
+          ><i class="fas fa-bars"></i> All</a
+        >
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Amazon mini TV</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Sell</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Best Sellers</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Today’s Deals</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Mobiles</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Customer Service</a>
+      </li>
+      <li class="nav-item dropdown m-0">
+        <a
+          class="nav-link dropdown-toggle text-light p-0"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          Prime
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Your Account</a></li>
+          <li><a class="dropdown-item" href="#">Orders</a></li>
+        </ul>
+      </li>
+  
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0" routerLink="/product">Electronics</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Fashion</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">New Releases</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Home & Kitchen</a>
+      </li>
+      <li class="nav-item m-0">
+        <a href="#" class="nav-link text-light p-0">Amazon Pay</a>
+      </li>
+    </ul>
+  </div>
+</header>
