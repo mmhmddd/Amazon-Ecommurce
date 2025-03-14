@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetourDataService } from '../services/getour-data.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-single-products',
@@ -9,7 +10,7 @@ import { GetourDataService } from '../services/getour-data.service';
 export class SingleProductsComponent implements OnInit{
   data:any;
   product:any;
-  constructor(private fetchdata:GetourDataService){}
+  constructor(private fetchdata:GetourDataService,private _CartService:CartService){}
 ngOnInit(): void {
   this.fetchdata.getData().subscribe((response)=>{
     const data=response;
@@ -19,5 +20,7 @@ ngOnInit(): void {
     console.log(this.data); // for checking
   })
 }
-
+addToCart(productId: number): void {
+  this._CartService.addToCart(productId);
+}
 }

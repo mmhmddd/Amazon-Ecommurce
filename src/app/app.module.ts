@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule and ReactiveFormsModule
 import { AppRoutingModule } from './app-routing.module';
@@ -14,8 +14,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-
+import { NotFoundComponent } from './not-found/not-found.component'
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderComponent } from './home/slider/slider.component';
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 
 @NgModule({
   declarations: [
@@ -23,23 +29,27 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RegisterComponent,
     LogInComponent,
     HomeComponent,
+    ProductsComponent,
     NavbarComponent,
     FooterComponent,
-    ProductsComponent,
     SingleProductsComponent,
     CartComponent,
     MainLayoutComponent,
     AuthLayoutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
