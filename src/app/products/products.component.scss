@@ -1,18 +1,26 @@
 $text-primary:#000000 ;
 $text-secondary:#717171 ;
 
-// @font-face {
-//     font-family: 'Inter';
-//     src: url('../../font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-//     font-weight: 100 900;
-//     font-style: normal;
-// }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
+.toggle-filters-btn{
+    display: none ;
+}
+// Sidebar toggle button for small screens
+.toggle-filters-btn {
+    display: none;
+    border: none;
+    color: #FFCC00;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+
+  }
+
 .cursor-pointer{
     cursor:pointer;
 }
@@ -20,7 +28,10 @@ body {
     background-color: #FFFFFF;
     margin: 7px;
     padding: 20px;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Full height of viewport */
+    overflow-y: auto;
     .filter-section{
         margin-bottom: 1.7rem ;
         .filter-title{
@@ -166,3 +177,63 @@ body {
     }
 }
 
+
+
+
+// Media Queries
+@media (max-width: 1024px) {
+    .product-card-contain .product-card {
+      width: calc((100% / 3) - (19px * 2 / 3));
+    }
+    .sidebar-toggle {
+        display: block;
+      }
+   
+      .toggle-filters-btn{
+          display: block ;
+      }
+      .filters-container {
+          display: none;
+        }
+        
+        .filters-container.active {
+          display: block;
+        }
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .sidebar-toggle {
+      display: block;
+    }
+ 
+    .toggle-filters-btn{
+        display: block ;
+    }
+    .filters-container {
+        display: none;
+      }
+      
+      .filters-container.active {
+        display: block;
+      }
+  
+    .filters-container {
+      transform: translateX(-100%);
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  
+    .product-card-contain .product-card {
+      width: calc((100% / 2) - (19px / 2));
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .product-card-contain .product-card {
+      width: 100%;
+    }
+  }
+  

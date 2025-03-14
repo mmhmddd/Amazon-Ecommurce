@@ -1,9 +1,11 @@
 
     <div class="container-fluid">
         <div class="row">
+          <button class="toggle-filters-btn" (click)="toggleFilters()">☰ Filters</button>
+
             <div class="col-lg-2">
-                <div class="filters-container">
-                    <!-- Delivery Day Filter -->
+              <div class="filters-container" [class.active]="isFiltersVisible">
+                <!-- Delivery Day Filter -->
                     <div class="filter-section">
                         <h3 class="filter-title">Delivery Day</h3>
                         <div class="filter-option">

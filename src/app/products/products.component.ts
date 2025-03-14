@@ -68,4 +68,17 @@ export class ProductsComponent implements OnInit {
   addToCart(productId: number): void {
     this._CartService.addToCart(productId);
   }
+
+
+  isFiltersVisible: boolean = false;
+
+  toggleFilters() {
+    this.isFiltersVisible = !this.isFiltersVisible;
+    const filterContainer = document.getElementById('filters-container');
+  
+    if (filterContainer) {
+      filterContainer.style.display = this.isFiltersVisible ? 'block' : 'none';
+    }
+  }
+  
 }

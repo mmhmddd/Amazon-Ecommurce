@@ -105,7 +105,7 @@ body {
     .need-help {
         margin: 10px 0;
         color: $baby-blue;
-        position: relative; // Add this to allow ::after positioning
+        position: relative; 
     
         &:hover {
             color: darken($baby-blue, 20%);
@@ -177,11 +177,10 @@ body {
         padding: 7px 11px;
         margin: auto;
         background-color: #FFFFFF;
-        transition: background-color 0.3s ease-in, border-color 0.3s ease-in; // Fix transition
-    
+        transition: background-color 0.3s ease-in, border-color 0.3s ease-in; 
         &:hover {
             background-color: darken($golden-color, 10%);
-            border-color: transparent; // Prevent layout shifts instead of `border: none;`
+            border-color: transparent;
         }
     }
    
@@ -219,5 +218,59 @@ body {
         font-size: 19.56px;
         line-height: 124%;
         counter-reset: $text-primary;
+    }
+}
+
+// Media queries
+@media (max-width: 1024px) {
+    .container-signIN, .create-nwe-acc {
+        width: 80%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-signIN, .create-nwe-acc {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo-container {
+        margin: 15px 0;
+    }
+
+    .footer .links-container {
+        flex-direction: column;
+        text-align: center;
+
+        span {
+            margin: 5px 0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container-signIN, .create-nwe-acc {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .create-nwe-acc p {
+        flex-direction: column;
+        text-align: center;
+        
+        &::before,
+        &::after {
+            width: 80%;
+            margin: 5px auto;
+        }
+    }
+
+    .footer p {
+        font-size: 14px;
     }
 }
