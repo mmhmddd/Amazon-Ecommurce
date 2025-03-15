@@ -44,7 +44,26 @@ export class CartService {
     this.cartItemsCount.next(this.getCartItemsCount());
   }
 
-  addToCart(productId: number): void {
+  addToCartInDetailsPage(productId: number): void {
+    const quantitySelect = document.getElementById('quantitySelect') as HTMLSelectElement;
+    const selectedText = quantitySelect.value;
+    
+    const selectedQuantity = parseInt(selectedText.split(':')[1].trim(), 10);
+  
+    let cart = this.cart.value;
+    let product = cart.find((item) => item.id === productId);
+  
+    if (product) {
+      product.count += selectedQuantity;
+    } else {
+      cart.push({ id: productId, count: selectedQuantity });
+    }
+  
+    this.updateCart(cart);
+
+  }
+  
+  addToCartInProductsPage(productId: number): void {
     let cart = this.cart.value;
     let product = cart.find((item) => item.id === productId);
     if (product) {

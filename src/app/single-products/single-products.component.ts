@@ -34,6 +34,6 @@ export class SingleProductsComponent implements OnInit {
   }
 
   addToCart(productId: number): void {
-    this._CartService.addToCart(productId);
+    this._CartService.addToCartInDetailsPage(productId);
   }
 }

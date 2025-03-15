@@ -66,7 +66,7 @@ export class ProductsComponent implements OnInit {
     this.filterProducts();
   }
   addToCart(productId: number): void {
-    this._CartService.addToCart(productId);
+    this._CartService.addToCartInProductsPage(productId);
   }
 
 
